@@ -8,11 +8,53 @@
     <script src="js/vendor/lodash/lodash.js"></script>
     <script src="js/vendor/contour/contour.min.js"></script>
     <script src="js/vendor/contour/contour.connectors.js"></script>
+    <script src="js/chord-connector.js"></script>
+    <script src="js/sankey.js"></script>
     <script src="js/google-doc.js"></script>
     <style>
+    .chord path, .link {
+      /*visibility: hidden;*/
+      /*opacity: .5;*/
+      /*fill-opacity: .37;*/
+      /*opacity: .1;*/
+      stroke: #fafafa;
+      /*stroke-width: 3px;*/
+    }
+
+    .chart {
+      width: 100%;
+      height: 3800px;
+      border: solid 1px red;
+    }
+
+    .country {
+      text-anchor: middle;
+      cursor: pointer;
+    }
+
+    .club {
+      cursor: pointer;
+    }
+
+    .link.active {
+      /*visibility: visible;*/
+      opacity: 1;
+      stroke: #666;
+      stroke-width: 2px;
+    }
+
+    .country.active, .club.active {
+      font-size: 120%;
+      fill: red;
+    }
+
+
     </style>
 </head>
 <body>
     
+    <div class="chart"></div>
+
+    <script src="js/vis.js"></script>
 </body>
 </html>

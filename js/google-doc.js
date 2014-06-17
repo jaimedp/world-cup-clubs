@@ -1,6 +1,6 @@
 (function() {
     var gDoc = {
-        csv: function (docKey, callback) {
+        loadCsv: function (docKey, callback) {
             var docUrl = this.getPath(docKey);
 
             $.ajax({
@@ -24,7 +24,8 @@
         },
 
         getPath: function (docKey) {
-          return 'https://docs.google.com/a/forio.com/spreadsheets/d/' + docKey + '/export?gid=0&format=csv'
+          return 'https://docs.google.com/spreadsheets/d/' + docKey + '/export?gid=0&format=csv'
+          // return 'https://docs.google.com/a/forio.com/spreadsheets/d/' + docKey + '/export?gid=0&format=csv'
         }
     }
 
